@@ -48,7 +48,6 @@
 
 .form-group .radio-wrapper:nth-last-child(3) {
   border-bottom: 1px solid var(--light-text);
-  margin-bottom: 32px;
 
 }
 
@@ -88,8 +87,10 @@
 
 .form-group .checkbox-wrapper{
   color: var(--light-gray);
+  margin: 32px 0;
   position: relative;
   width: 100%;
+
 }
 
 .form-group .checkbox-wrapper span{
