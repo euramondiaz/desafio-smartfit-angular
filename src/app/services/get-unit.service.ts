@@ -7,7 +7,7 @@ import { UnitsResponse } from '../types/unit-response.interface';
   providedIn: 'root'
 })
 export class GetUnitService {
-  readonly apiUrl = "https://github.com/bioritmo/front-end-code-challenge-smartsite/tree/master";
+  readonly apiUrl = "https://test-frontend-developer.s3.amazonaws.com/data/locations.json";
 
   constructor(private httpClient: HttpClient) { }
 

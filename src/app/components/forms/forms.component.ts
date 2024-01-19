@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder,FormGroup, } from '@angular/forms';
 import { GetUnitService } from 'src/app/services/get-unit.service';
+import { Location } from 'src/app/types/location.interface';
+
 
 @Component({
   selector: 'app-forms',
@@ -8,26 +10,35 @@ import { GetUnitService } from 'src/app/services/get-unit.service';
   styleUrls: ['./forms.component.scss']
 })
 export class FormsComponent  {
-  results= [];
+  results: Location []= [];
   formGroup!: FormGroup;
-
+  filteredResults: Location[] = [];
   constructor (private formBuilder: FormBuilder, private unitService: GetUnitService){}
 
 
   ngOnInit(): void {
-    this.unitService.getAllTnits().subscribe(data => console.log(data));
     this.formGroup = this.formBuilder.group({
       hour: '',
-      showClosed:  false
+      showClosed:  true
     })
+    this.unitService.getAllTnits().subscribe(data => {
+      this.results = data.locations;
+      this.filteredResults = data.locations;
+    });
   }
 
   onSubmit(): void {
-    console.log(this.formGroup.value)
-  }
-  https://agilidadeweb.com/home-agilidade-2/
+    if (!this.formGroup.value.showClosed) {
+      this.filteredResults = this.results.filter(location => location.opened === true)
+    }
+    else {
+      this.filteredResults = this.results;
+    }
+}
+
   onClean(): void {
     this.formGroup.reset();
   }
 }
 
+//console.log(data)
