@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GetUnitService } from './get-unit.service';
+import { FilterUnitsService } from './filter-units.service';
 
-describe('GetUnitService', () => {
-  let service: GetUnitService;
+describe('FilterUnitsService', () => {
+  let service: FilterUnitsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GetUnitService);
+    service = TestBed.inject(FilterUnitsService);
   });
 
   it('should be created', () => {

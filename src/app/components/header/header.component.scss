@@ -1,10 +1,11 @@
-header{
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  min-width: 100vw;
-  gap: 33px;
+
+  gap: 32px;
 }
 
 header .logo-container {
@@ -18,9 +19,8 @@ header .logo-container {
 }
 
 header .logo-container img {
- height: 100px;
+  height: 100px;
 }
-
 
 header .text-container {
   display: flex;
@@ -36,11 +36,11 @@ header .text-container h1 {
   color: var(--dark-grey);
 }
 
-header .text-container p{
+header .text-container p {
   color: var(--light-grey);
 }
 
-header .text-container .heading{
+header .text-container .heading {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -50,10 +50,8 @@ header .text-container .heading{
   gap: 14px;
 }
 
-header .text-container .heading .heading-border{
+header .text-container .heading .heading-border {
   height: 12px;
-  width: 35%;
+  width: 40%;
   background-color: var(--dark-grey);
-
 }
-
